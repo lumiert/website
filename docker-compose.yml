@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: lumiert-portfolio-dev
+    container_name: lumiert-dev
     ports:
       - "3000:3000"
     volumes:
@@ -14,14 +14,14 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-    command: pnpm run dev
+    command: npm run dev
 
   # Serviço de produção
   prod:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: lumiert-portfolio-prod
+    container_name: lumiert-production
     ports:
       - "80:80"
     environment:
