@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  # Serviço de desenvolvimento com hot reload
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: lumiert-portfolio-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: pnpm run dev
+
+  # Serviço de produção
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lumiert-portfolio-prod
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
