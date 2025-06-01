@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Instalar dependências com NPM
-RUN npm install --legacy-peer-deps
+RUN npm install react-intersection-observer && npm install --save-dev @types/react-intersection-observer
 
 # Copiar restante do código-fonte
 COPY . .
