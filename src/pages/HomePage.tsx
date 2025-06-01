@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Heading from '../components/Heading';
 import Container from '../components/Container';
 import Button from '../components/Button';
+import { ArrowDown, MoveDown } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   return (
@@ -45,6 +46,16 @@ const HomePage: React.FC = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 100 }}
+              transition={{ duration: 2 }}
+              className="relative flex"
+            >
+              <MoveDown/>
+              <MoveDown/>
+              <MoveDown/>
             </motion.div>
           </div>
         </Container>

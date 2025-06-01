@@ -23,21 +23,13 @@ function App() {
             <Route path="/contato" element={<ContatoPage />} />
           </Routes>
         </main>
-        <footer className="py-8 border-t-2 border-text mt-16">
+        <footer className="border-t-2 border-text mt-16">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <img src="/LogoGlifo.webp" alt="Lumiert" className="h-24" />
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm uppercase tracking-wider">© {new Date().getFullYear()} Lumiert</p>
-              <a 
-                href="https://wa.me/5554997122776" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block mt-2 text-sm uppercase tracking-wider hover:text-purple transition-colors duration-300"
-              >
-                Contato: +55 54 99712-2776
-              </a>
             </div>
           </div>
         </footer>
