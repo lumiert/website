@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Manifesto Section */}
-      <section style={{ backgroundImage: 'url("/geographic.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white' }} className="py-24 relative">
+      <section className="py-24 relative text-white bg-cover bg-topo">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
           <motion.div

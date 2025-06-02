@@ -97,8 +97,8 @@ const PortfolioPage: React.FC = () => {
       </section>
 
       {/* Featured Releases */}
-      <section className="py-16 bg-lightGray relative">
-        <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
+      <section className="py-16 bg-topo bg-fixed bg-cover text-white relative">
+        <div className="absolute inset-0 opacity-10 pointer-events-none "></div>
         <Container>
           <Heading level={2} className="mb-12">
             LANÇAMENTOS EM DESTAQUE
@@ -109,7 +109,7 @@ const PortfolioPage: React.FC = () => {
                 <div className="aspect-square bg-darkGray flex items-center justify-center">
                   <span className="text-white text-xl font-bold">Release {item}</span>
                 </div>
-                <div className="p-6">
+                <div className="p-6 bg-darkGray">
                   <h3 className="text-xl font-bold mb-2">Lançamento {item}</h3>
                   <p className="mb-4">Descrição breve do lançamento musical.</p>
                 </div>

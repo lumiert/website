@@ -23,7 +23,7 @@ function App() {
             <Route path="/contato" element={<ContatoPage />} />
           </Routes>
         </main>
-        <footer className="border-t-2 border-text mt-16">
+        <footer className="border-t-2 border-text">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <img src="/LogoGlifo.webp" alt="Lumiert" className="h-24" />

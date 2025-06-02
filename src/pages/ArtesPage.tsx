@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import { animations } from '../styles/design-system';
+import { ArrowUpRight } from 'lucide-react';
 
 const ArtesPage: React.FC = () => {
   return (
@@ -57,7 +58,7 @@ const ArtesPage: React.FC = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="py-16 bg-lightGray relative">
+      <section className="py-16 bg-lightGray bg-topo bg-fixed bg-cover text-white relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <Heading level={2} className="mb-12">
@@ -72,15 +73,15 @@ const ArtesPage: React.FC = () => {
             ].map((category, index) => (
               <motion.div
                 key={index}
-                className="border-2 border-text bg-background p-6 hover:border-purple transition-colors duration-300"
+                className="border-2 border-text bg-darkGray bg-background p-6 hover:border-purple transition-colors duration-300"
                 initial={animations.slideUp.initial}
                 animate={animations.slideUp.animate}
                 transition={{ ...animations.slideUp.transition, delay: index * 0.1 }}
               >
                 <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
                 <p className="mb-6">{category.desc}</p>
-                <Button href="#" variant="secondary" size="sm">
-                  Explorar
+                <Button href="#" variant="primary" size="sm">
+                 <ArrowUpRight className="w-4 h-4 ms-1 inline-block align-text-bottom" /> Explorar
                 </Button>
               </motion.div>
             ))}

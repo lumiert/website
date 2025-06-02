@@ -76,7 +76,7 @@ const ComunidadePage: React.FC = () => {
               animate={animations.slideInRight.animate}
               transition={animations.slideInRight.transition}
             >
-              <div className="relative h-full rounded-md border-text overflow-hidden bg-darkGray flex items-center justify-center">
+              <div className="relative h-full rounded-md border-text overflow-hidden bg-darkGray flex items-center justify-center drop-shadow-floating">
                 <img 
                   src="/discord-print.jpg" 
                   alt="Discord print" 
@@ -84,7 +84,7 @@ const ComunidadePage: React.FC = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-1/2">
-                <img src="/Discord-Symbol-Blurple.png" alt="Discord Logo" className="w-full h-full object-contain shadow-2xl "/>
+                <img src="/Discord-Symbol-Blurple.png" alt="Discord Logo" className="w-full h-full object-contain drop-shadow-floating"/>
               </div>
             </motion.div>
           </div>
@@ -92,7 +92,7 @@ const ComunidadePage: React.FC = () => {
       </section>
 
       {/* Community Events Section */}
-      <section className="py-16 bg-lightGray relative">
+      <section className="py-16 bg-topo bg-fixed bg-cover text-white relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <Heading level={2} className="mb-12">
@@ -106,14 +106,14 @@ const ComunidadePage: React.FC = () => {
             ].map((event, index) => (
               <motion.div
                 key={index}
-                className="border-2 border-text bg-background p-6 hover:border-purple transition-colors duration-300"
+                className="border-2 border-text bg-darkGray bg-background p-6 hover:border-purple transition-colors duration-300"
                 initial={animations.slideUp.initial}
                 animate={animations.slideUp.animate}
                 transition={{ ...animations.slideUp.transition, delay: index * 0.1 }}
               >
                 <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
                 <p className="mb-6">{event.desc}</p>
-                <Button href="https://dcd.gg/lumiert" variant="secondary" size="sm">
+                <Button href="https://dcd.gg/lumiert" variant="primary" size="sm">
                   <ArrowUpRight className="w-4 h-4 ms-1 inline-block align-text-bottom" /> Saiba mais
                 </Button>
               </motion.div>
