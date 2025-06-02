@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Heading from '../components/Heading';
 import Container from '../components/Container';
 import Button from '../components/Button';
-import { ArrowDown, MoveDown } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, MoveDown, Plus } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
       <section className="min-h-screen flex items-top relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-32">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -47,22 +47,34 @@ const HomePage: React.FC = () => {
                 />
               </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 100 }}
-              transition={{ duration: 2 }}
-              className="relative flex"
-            >
-              <MoveDown/>
-              <MoveDown/>
-              <MoveDown/>
-            </motion.div>
+    <motion.div
+      className="relative flex  items-center gap-1"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {[...Array(3)].map((_, i) => (
+        <motion.div
+          key={i}
+          animate={{ y: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "loop",
+            delay: i * 0.2,
+            ease: "easeInOut",
+          }}
+        >
+          <MoveDown />
+        </motion.div>
+      ))}
+    </motion.div>
           </div>
         </Container>
       </section>
 
       {/* Manifesto Section */}
-      <section className="py-24 relative">
+      <section style={{ backgroundImage: 'url("/geographic.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', color: 'white' }} className="py-24 relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
           <motion.div
@@ -75,7 +87,7 @@ const HomePage: React.FC = () => {
               MANIFESTO
             </Heading>
             <p className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-12 max-w-3xl mx-auto">
-              "Não sigo tendências, crio experiências sonoras que desafiam o convencional e expandem os limites da música eletrônica."
+              "Conecto emoções, crio experiências sonoras que desafiam o convencional e expandem os limites da música eletrônica."
             </p>
             <div className="w-24 h-1 bg-purple mx-auto"></div>
           </motion.div>
@@ -105,7 +117,7 @@ const HomePage: React.FC = () => {
                   <h3 className="text-xl font-bold mb-2">Projeto {item}</h3>
                   <p className="mb-4">Descrição breve do projeto de música ou arte visual.</p>
                   <Button href="/portfolio" variant="secondary" size="sm">
-                    Ver mais
+                   <ArrowUpRight className="w-4 h-4 ms-1 inline-block align-text-bottom" />  Ver mais
                   </Button>
                 </div>
               </motion.div>

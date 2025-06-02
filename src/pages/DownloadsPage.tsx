@@ -5,7 +5,25 @@ import Container from '../components/Container';
 import Button from '../components/Button';
 import BrutalistCard from '../components/BrutalistCard';
 
-import { Download, ArrowUpRight } from 'lucide-react';
+import { Download, ArrowUpRight, KeyboardMusic, AudioWaveform, LayoutTemplate } from 'lucide-react';
+
+const categories = [
+  {
+    title: 'PRESETS',
+    desc: 'Configurações de sintetizadores e efeitos usados em minhas produções.',
+    icon: <KeyboardMusic size={48} color="#111111" strokeWidth={1.5} />,
+  },
+  {
+    title: 'SAMPLES',
+    desc: 'Samples originais e processados para uso em suas produções.',
+    icon: <AudioWaveform size={48} color="#111111" strokeWidth={1.5} />,
+  },
+  {
+    title: 'TEMPLATES',
+    desc: 'Templates de projetos para diferentes DAWs.',
+    icon: <LayoutTemplate size={48} color="#111111" strokeWidth={1.5} />,
+  },
+];
 
 const DownloadsPage: React.FC = () => {
   return (
@@ -34,25 +52,23 @@ const DownloadsPage: React.FC = () => {
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: 'PRESETS', desc: 'Configurações de sintetizadores e efeitos usados em minhas produções.' },
-              { title: 'SAMPLES', desc: 'Samples originais e processados para uso em suas produções.' },
-              { title: 'TEMPLATES', desc: 'Templates de projetos para diferentes DAWs.' }
-            ].map((category, index) => (
+            {categories.map((category, index) => (
               <motion.div
                 key={index}
-                className="border-2 border-text bg-background p-6 transition-colors duration-300 text-center"
+                className="flex flex-col justify-between border-2 border-text bg-background p-6 transition-colors duration-300 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="aspect-square bg-darkGray mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">{category.title}</span>
+                <div className="aspect-square flex flex-col items-center justify-center">
+                  {category.icon}
+                  <span className="bg-background text-xl font-bold mt-8">{category.title}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
-                <p className="mb-6">{category.desc}</p>
+
+                <p className="mb-4">{category.desc}</p>
+
                 <Button href={`#${category.title.toLowerCase()}`} variant="secondary" size="sm">
-                  <ArrowUpRight className="w-4 h-4 inline-flex align-middle"/> Acessar
+                  <ArrowUpRight className="w-4 h-4 ms-1 inline-block align-text-bottom" /> Acessar
                 </Button>
               </motion.div>
             ))}
@@ -86,7 +102,7 @@ const DownloadsPage: React.FC = () => {
                   <p className="mb-4 flex-grow">Descrição do pacote de presets e instrumentos incluídos.</p>
                   <div className="mt-4">
                     <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
-                      <Download className="w-4 h-4 inline-flex"/> Download
+                      <Download className="w-4 h-4 ms-1 inline-block align-text-bottom"/> Download
                     </Button>
                   </div>
                 </div>
@@ -123,7 +139,7 @@ const DownloadsPage: React.FC = () => {
                   <div className="mt-auto">
                   <div className="mt-4">
                     <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
-                      <Download className="w-4 h-4 inline-flex"/> Download
+                      <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
                   </div>
@@ -160,7 +176,7 @@ const DownloadsPage: React.FC = () => {
                   <p className="mb-4 flex-grow">Descrição do template e DAW compatível.</p>
                   <div className="mt-auto">
                     <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
-                      <Download className="w-4 h-4 inline-flex"/> Download
+                      <Download className="w-4 h-4 ms-1 inline-block align-text-bottom"/> Download
                     </Button>
                   </div>
                 </div>

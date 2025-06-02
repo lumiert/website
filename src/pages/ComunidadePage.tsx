@@ -4,6 +4,7 @@ import Heading from '../components/Heading';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import { animations } from '../styles/design-system';
+import { ArrowUpRight } from 'lucide-react';
 
 const ComunidadePage: React.FC = () => {
   return (
@@ -66,7 +67,7 @@ const ComunidadePage: React.FC = () => {
                 size="lg"
                 className="text-lg"
               >
-                Entrar no Discord
+               <ArrowUpRight className="w-6 h-6 ms-1 inline-block align-text-top"/> Entrar no Discord
               </Button>
             </motion.div>
             <motion.div
@@ -75,10 +76,16 @@ const ComunidadePage: React.FC = () => {
               animate={animations.slideInRight.animate}
               transition={animations.slideInRight.transition}
             >
-              <div className="relative w-full aspect-square border-2 border-text overflow-hidden bg-darkGray flex items-center justify-center">
-                <div className="text-5xl mb-4">💬</div>
+              <div className="relative h-full rounded-md border-text overflow-hidden bg-darkGray flex items-center justify-center">
+                <img 
+                  src="/discord-print.jpg" 
+                  alt="Discord print" 
+                  className="w-full h-full object-contain shadow-2xl"
+                />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-2 border-cyan bg-background"></div>
+              <div className="absolute -bottom-4 -right-4 w-1/2">
+                <img src="/Discord-Symbol-Blurple.png" alt="Discord Logo" className="w-full h-full object-contain shadow-2xl "/>
+              </div>
             </motion.div>
           </div>
         </Container>
@@ -107,7 +114,7 @@ const ComunidadePage: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-4">{event.title}</h3>
                 <p className="mb-6">{event.desc}</p>
                 <Button href="https://dcd.gg/lumiert" variant="secondary" size="sm">
-                  Saiba mais
+                  <ArrowUpRight className="w-4 h-4 ms-1 inline-block align-text-bottom" /> Saiba mais
                 </Button>
               </motion.div>
             ))}

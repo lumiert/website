@@ -89,7 +89,7 @@ export const effects = {
   // Efeitos visuais
   grain: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")',
   glitch: 'position: relative; &:before, &:after { content: attr(data-text); position: absolute; top: 0; left: 0; width: 100%; height: 100%; } &:before { left: 2px; text-shadow: -1px 0 #00BFFF; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim 5s infinite linear alternate-reverse; } &:after { left: -2px; text-shadow: -1px 0 #7928CA; clip: rect(44px, 450px, 56px, 0); animation: glitch-anim2 5s infinite linear alternate-reverse; }',
-  
+
   // Transições
   transition: {
     fast: 'all 0.2s ease',
