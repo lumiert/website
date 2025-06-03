@@ -73,7 +73,7 @@ const ArtesPage: React.FC = () => {
             ].map((category, index) => (
               <motion.div
                 key={index}
-                className="border-2 border-text bg-darkGray bg-background p-6 hover:border-purple transition-colors duration-300"
+                className="border-2 border-text border-white bg-darkGray bg-background p-6 transition-colors duration-300"
                 initial={animations.slideUp.initial}
                 animate={animations.slideUp.animate}
                 transition={{ ...animations.slideUp.transition, delay: index * 0.1 }}

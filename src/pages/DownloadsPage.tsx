@@ -77,7 +77,7 @@ const DownloadsPage: React.FC = () => {
       </section>
 
       {/* Presets Section */}
-      <section id="presets" className="py-16 bg-lightGray relative">
+      <section id="presets" className="py-16 bg-topo text-white bg-fixed relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <Heading level={2} className="mb-12">
@@ -85,7 +85,7 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2, 3, 4].map((item) => (
-              <BrutalistCard key={item} className="flex flex-col">
+              <BrutalistCard key={item} className="flex border-white flex-col">
                 <div className="aspect-video bg-darkGray flex items-center justify-center">
                   <img 
                     src={`/preset-pack-${item}.jpg`} 
@@ -97,7 +97,7 @@ const DownloadsPage: React.FC = () => {
                     }}
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 bg-darkGray flex flex-col flex-grow">
                   <h3 className="text-xl font-bold mb-2">Preset Pack {item}</h3>
                   <p className="mb-4 flex-grow">Descrição do pacote de presets e instrumentos incluídos.</p>
                   <div className="mt-4">
@@ -151,7 +151,7 @@ const DownloadsPage: React.FC = () => {
       </section>
 
       {/* Templates Section */}
-      <section id="templates" className="py-16 bg-lightGray relative">
+      <section id="templates" className="py-16 bg-topo text-white bg-fixed relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <Heading level={2} className="mb-12">
@@ -159,7 +159,7 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[1, 2].map((item) => (
-              <BrutalistCard key={item} className="flex flex-col">
+              <BrutalistCard key={item} className="flex border-white flex-col">
                 <div className="aspect-video bg-darkGray flex items-center justify-center">
                   <img 
                     src={`/template-${item}.jpg`} 
@@ -171,7 +171,7 @@ const DownloadsPage: React.FC = () => {
                     }}
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
+                <div className="p-6 flex flex-col bg-darkGray flex-grow">
                   <h3 className="text-xl font-bold mb-2">Template {item}</h3>
                   <p className="mb-4 flex-grow">Descrição do template e DAW compatível.</p>
                   <div className="mt-auto">

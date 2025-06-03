@@ -40,34 +40,19 @@ const ContatoPage: React.FC = () => {
               <Button 
                 href="mailto:contato@lumiert.com" 
                 size="lg"
-                className="w-full justify-center text-lg"
+                className="w-full justify-center text-lg mb-4"
               >
                 contato@lumiert.com
               </Button>
+              <Button 
+                href="https://wa.me/5554997122776" 
+                size="lg"
+                className="w-full justify-center text-lg mb-4" 
+              >
+                WhatsApp
+              </Button>
             </div>
           </BrutalistCard>
-          
-          <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">REDES SOCIAIS</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { name: 'Instagram', url: 'https://instagram.com/lumiert' },
-                { name: 'Twitter', url: 'https://twitter.com/lumiert' },
-                { name: 'YouTube', url: 'https://youtube.com/lumiert' },
-                { name: 'SoundCloud', url: 'https://soundcloud.com/lumiert' }
-              ].map((social, index) => (
-                <a 
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-text hover:border-purple transition-colors duration-300 p-4 flex items-center justify-center bg-background"
-                >
-                  <span className="font-bold">{social.name}</span>
-                </a>
-              ))}
-            </div>
-          </div>
         </Container>
       </section>
     </div>

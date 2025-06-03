@@ -105,7 +105,7 @@ const PortfolioPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <BrutalistCard key={item} className="overflow-hidden">
+              <BrutalistCard key={item} className="overflow-hidden border-white">
                 <div className="aspect-square bg-darkGray flex items-center justify-center">
                   <span className="text-white text-xl font-bold">Release {item}</span>
                 </div>
