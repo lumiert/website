@@ -28,10 +28,10 @@ const ContatoPage: React.FC = () => {
       </section>
 
       {/* Contact Info Section */}
-      <section className="py-16 relative">
+      <section className="py-16 relative bg-fixed bg-topo">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
-          <BrutalistCard className="p-8 text-center">
+          <BrutalistCard className="p-8 text-center bg-darkGray text-white border-white">
             <h2 className="text-3xl font-bold mb-6">FALE COMIGO</h2>
             <div className="max-w-md mx-auto">
               <p className="mb-8 text-lg">

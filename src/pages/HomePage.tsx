@@ -47,24 +47,24 @@ const HomePage: React.FC = () => {
                 />
               </div>
             </motion.div>
-    <motion.div
-      className="relative flex  items-center gap-1"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      {[...Array(3)].map((_, i) => (
-        <motion.div
-          key={i}
-          animate={{ y: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            repeatType: "loop",
-            delay: i * 0.2,
-            ease: "easeInOut",
-          }}
-        >
+<motion.div
+  className="relative flex items-center gap-1 -translate-y-96 md:translate-y-0"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+            {[...Array(3)].map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{ y: [0, 5, 0], opacity: [0.5, 1, 0.5] }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  delay: i * 0.2,
+                  ease: "easeInOut",
+                }}
+              >
           <MoveDown />
         </motion.div>
       ))}
