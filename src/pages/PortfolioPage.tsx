@@ -98,18 +98,21 @@ const PortfolioPage: React.FC = () => {
 
       {/* Featured Releases */}
       <section className="py-16 bg-topo bg-fixed bg-cover text-white relative">
-        <div className="absolute inset-0 opacity-10 pointer-events-none "></div>
+        <div className=""></div>
         <Container>
           <Heading level={2} className="mb-12">
             LANÇAMENTOS EM DESTAQUE
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map((item) => (
-              <BrutalistCard key={item} className="overflow-hidden border-white">
-                <div className="aspect-square bg-darkGray flex items-center justify-center">
+              <BrutalistCard
+                key={item}
+                className="overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all"
+              >
+                <div className="aspect-square flex items-center justify-center">
                   <span className="text-white text-xl font-bold">Release {item}</span>
                 </div>
-                <div className="p-6 bg-darkGray">
+                <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">Lançamento {item}</h3>
                   <p className="mb-4">Descrição breve do lançamento musical.</p>
                 </div>

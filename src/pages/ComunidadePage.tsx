@@ -106,7 +106,7 @@ const ComunidadePage: React.FC = () => {
             ].map((event, index) => (
               <motion.div
                 key={index}
-                className="border-2 border-text bg-darkGray border-white bg-background p-6 transition-colors duration-300"
+                className="border-2 border-text border-white bg-darkGray/20 backdrop-blur-md p-6 transition-colors duration-300"
                 initial={animations.slideUp.initial}
                 animate={animations.slideUp.animate}
                 transition={{ ...animations.slideUp.transition, delay: index * 0.1 }}

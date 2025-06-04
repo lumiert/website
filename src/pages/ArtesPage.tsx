@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Heading from '../components/Heading';
 import Container from '../components/Container';
 import { animations } from '../styles/design-system';
-import { ArrowUpRight, X, ChevronDown } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
 import galleryDataJson from '../gallery-data.json'; // Import the generated JSON
 import { Dialog, DialogContent, DialogOverlay, DialogClose } from '../components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../components/ui/carousel";
@@ -45,7 +45,7 @@ const GalleryModal: React.FC<GalleryModalProps> = ({ item, isOpen, onClose }) =>
           onClick={onClose}
           className="absolute right-3 top-3 z-[60] rounded-none p-1 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"
         >
-          <X className="h-6 w-6 text-darkGray hover:text-purple transition-colors" />
+          <X className="h-6 w-6 text-stone-600 hover:text-purple transition-colors" />
           <span className="sr-only">Fechar</span>
         </DialogClose>
 
@@ -158,7 +158,7 @@ const ArtesPage: React.FC = () => {
 
       {/* Gallery Section */} 
       <section className="py-24 relative text-white bg-cover bg-topo bg-fixed bg-cover">
-        <div className=" absolute inset-0 pointer-events-none"></div>
+        <div className="absolute inset-0 pointer-events-none"></div>
         <Container>
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
             <Heading className="text-white" level={2}>GALERIA</Heading>
@@ -166,12 +166,12 @@ const ArtesPage: React.FC = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 {/* Changed Button variant and text */} 
-                <Button variant="ghost" className="flex items-center gap-14 text-white hover:bg-transparent hover:text-purple px-2 rounded-none border-b border-transparent hover:border-purple">
+                <Button variant="ghost" className="flex items-center gap-9 text-white hover:bg-transparent hover:text-purple rounded-none border-2 border-white hover:border-purple">
                   Categorias
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="rounded-none border-text/20 bg-background"> {/* Added rounded-none */} 
+              <DropdownMenuContent align="end" className="border-text/20 bg-background"> {/* Added rounded-none */} 
                 <DropdownMenuLabel>Filtrar por Categoria</DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-text/20"/>
                 {categories.map(category => (

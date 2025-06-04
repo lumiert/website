@@ -31,7 +31,7 @@ const ContatoPage: React.FC = () => {
       <section className="py-16 relative bg-fixed bg-topo bg-cover">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
-          <BrutalistCard className="p-8 text-center bg-darkGray text-white border-white">
+          <BrutalistCard className="p-8 text-center overflow-hidden backdrop-blur-md bg-darkGray/20 transition-all bg-darkGray text-white border-white">
             <h2 className="text-3xl font-bold mb-6">FALE COMIGO</h2>
             <div className="max-w-md mx-auto">
               <p className="mb-8 text-lg">
