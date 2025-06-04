@@ -74,7 +74,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Manifesto Section */}
-      <section className="py-24 relative text-white bg-cover bg-topo bg-fixed">
+      <section className="py-24 relative text-white bg-cover bg-topo bg-fixed bg-cover">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
           <motion.div

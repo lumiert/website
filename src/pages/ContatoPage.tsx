@@ -28,7 +28,7 @@ const ContatoPage: React.FC = () => {
       </section>
 
       {/* Contact Info Section */}
-      <section className="py-16 relative bg-fixed bg-topo">
+      <section className="py-16 relative bg-fixed bg-topo bg-cover">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container size="md">
           <BrutalistCard className="p-8 text-center bg-darkGray text-white border-white">

@@ -77,7 +77,7 @@ const DownloadsPage: React.FC = () => {
       </section>
 
       {/* Presets Section */}
-      <section id="presets" className="py-16 bg-topo text-white bg-fixed relative">
+      <section id="presets" className="py-16 bg-topo bg-fixed bg-cover text-white relative">
         <div className="absolute inset-0 opacity-10 pointer-events-none"></div>
         <Container>
           <Heading level={2} className="mb-12">
