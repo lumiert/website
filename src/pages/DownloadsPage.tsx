@@ -4,7 +4,6 @@ import Heading from '../components/Heading';
 import Container from '../components/Container';
 import Button from '../components/Button';
 import BrutalistCard from '../components/BrutalistCard';
-
 import { Download, ArrowUpRight, KeyboardMusic, AudioWaveform, LayoutTemplate } from 'lucide-react';
 
 const categories = [
@@ -84,30 +83,24 @@ const DownloadsPage: React.FC = () => {
             PRESETS
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <BrutalistCard key={item} className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
+              <BrutalistCard className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
                 <div className="aspect-video flex items-center justify-center">
                   <img 
-                    src={`/preset-pack-${item}.jpg`} 
-                    alt={`Preset Pack ${item}`}
+                    src={`/downloads.jpg`} 
+                    alt={`Preset Pack`}
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='white' text-anchor='middle' alignment-baseline='middle'%3EPreset Pack " + item + "%3C/text%3E%3C/svg%3E";
-                    }}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2">Preset Pack {item}</h3>
-                  <p className="mb-4 flex-grow">Descrição do pacote de presets e instrumentos incluídos.</p>
+                  <h3 className="text-xl font-bold mb-2"></h3>
+                  <p className="mb-4 flex-grow"></p>
                   <div className="mt-4">
-                    <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
-                      <Download className="w-4 h-4 ms-1 inline-block align-text-bottom"/> Download
+                    <Button href="" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
+                      <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
                 </div>
               </BrutalistCard>
-            ))}
           </div>
         </Container>
       </section>
@@ -120,22 +113,13 @@ const DownloadsPage: React.FC = () => {
             SAMPLES
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((item) => (
-              <BrutalistCard key={item} className="flex flex-col">
+              <BrutalistCard className="flex flex-col">
                 <div className="aspect-video bg-darkGray flex items-center justify-center">
-                  <img 
-                    src={`/sample-pack-${item}.jpg`} 
-                    alt={`Sample Pack ${item}`}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='white' text-anchor='middle' alignment-baseline='middle'%3ESample Pack " + item + "%3C/text%3E%3C/svg%3E";
-                    }}
-                  />
+                  <img src="downloads/samples/vanilla-house-drum-kit/cover.jpg" className="w-full h-full object-cover" alt="Sample Pack" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2">Sample Pack {item}</h3>
-                  <p className="mb-4 flex-grow">Descrição do pacote de samples e conteúdo incluído. Este texto pode ser mais longo para testar o alinhamento vertical.</p>
+                  <h3 className="text-xl font-bold mb-2"></h3>
+                  <p className="mb-4 flex-grow">Um drum kit de house pronto para uso, contendo samples base. Um ponto de partida para produção musical.</p>
                   <div className="mt-auto">
                   <div className="mt-4">
                     <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
@@ -145,7 +129,6 @@ const DownloadsPage: React.FC = () => {
                   </div>
                 </div>
               </BrutalistCard>
-            ))}
           </div>
         </Container>
       </section>
@@ -158,30 +141,20 @@ const DownloadsPage: React.FC = () => {
             TEMPLATES
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[1, 2].map((item) => (
-              <BrutalistCard key={item} className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
+              <BrutalistCard className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
                 <div className="aspect-video bg-darkGray flex items-center justify-center">
-                  <img 
-                    src={`/template-${item}.jpg`} 
-                    alt={`Template ${item}`}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333'/%3E%3Ctext x='50' y='50' font-family='Arial' font-size='12' fill='white' text-anchor='middle' alignment-baseline='middle'%3ETemplate " + item + "%3C/text%3E%3C/svg%3E";
-                    }}
-                  />
+                  <img src="" className="w-full h-full object-cover" alt="Template Pack" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2">Template {item}</h3>
-                  <p className="mb-4 flex-grow">Descrição do template e DAW compatível.</p>
+                  <h3 className="text-xl font-bold mb-2"></h3>
+                  <p className="mb-4 flex-grow"></p>
                   <div className="mt-auto">
                     <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
-                      <Download className="w-4 h-4 ms-1 inline-block align-text-bottom"/> Download
+                      <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
                 </div>
               </BrutalistCard>
-            ))}
           </div>
         </Container>
       </section>
