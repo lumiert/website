@@ -122,7 +122,7 @@ const DownloadsPage: React.FC = () => {
                   <p className="mb-4 flex-grow">Um drum kit de house pronto para uso, contendo samples base. Um ponto de partida para produção musical.</p>
                   <div className="mt-auto">
                   <div className="mt-4">
-                    <Button href="#" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
+                    <Button href="/downloads/samples/vanilla-house-drum-kit/[Lumiert] VANILLA - House Drum Kit.zip" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
                       <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
