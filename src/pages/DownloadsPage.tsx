@@ -84,18 +84,14 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <BrutalistCard className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
-                <div className="aspect-video flex items-center justify-center">
-                  <img 
-                    src={`/downloads.jpg`} 
-                    alt={`Preset Pack`}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="aspect-video bg-darkGray flex items-center justify-center">
+                  <img src="downloads/presets/warehouse-garage-presets/cover.jpg" className="w-full h-full object-cover" alt="Preset Packs" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2"></h3>
-                  <p className="mb-4 flex-grow"></p>
+                  <h3 className="text-xl font-bold mb-2">Warehouse Garage Serum Presets - Vol. 1</h3>
+                  <p className="mb-4 flex-grow">Uma seleção de presets de Serum com foco em bass para garage. </p>
                   <div className="mt-4">
-                    <Button href="" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
+                    <Button href="downloads/presets/warehouse-garage-presets/[Lumiert] WAREHOUSE - Garage Presets Vol. 1.zip" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
                       <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
@@ -115,14 +111,14 @@ const DownloadsPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <BrutalistCard className="flex flex-col">
                 <div className="aspect-video bg-darkGray flex items-center justify-center">
-                  <img src="downloads/samples/vanilla-house-drum-kit/cover.jpg" className="w-full h-full object-cover" alt="Sample Pack" />
+                  <img src="downloads/samples/vanilla-house-drum-kit/cover.jpg" className="w-full h-full object-cover" alt="Sample Packs" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold mb-2"></h3>
+                  <h3 className="text-xl font-bold mb-2">Vanilla House Drum Kit - Vol. 1</h3>
                   <p className="mb-4 flex-grow">Um drum kit de house pronto para uso, contendo samples base. Um ponto de partida para produção musical.</p>
                   <div className="mt-auto">
                   <div className="mt-4">
-                    <Button href="/downloads/samples/vanilla-house-drum-kit/[Lumiert] VANILLA - House Drum Kit.zip" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
+                    <Button href="/downloads/samples/vanilla-house-drum-kit/[Lumiert] VANILLA - House Drum Kit Vol. 1.zip" size="sm" className="inline-flex items-center gap-1 whitespace-nowrap">
                       <Download className="w-4 h-4 ms-1 inline-block align-text-top"/> Download
                     </Button>
                   </div>
