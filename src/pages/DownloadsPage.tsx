@@ -84,7 +84,7 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <BrutalistCard className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
-                <div className="aspect-video bg-darkGray flex items-center justify-center">
+                <div className="bg-darkGray flex items-center justify-center">
                   <img src="downloads/presets/warehouse-garage-presets/cover.jpg" className="w-full h-full object-cover" alt="Preset Packs" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -110,7 +110,7 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <BrutalistCard className="flex flex-col">
-                <div className="aspect-video bg-darkGray flex items-center justify-center">
+                <div className="bg-darkGray flex items-center justify-center">
                   <img src="downloads/samples/vanilla-house-drum-kit/cover.jpg" className="w-full h-full object-cover" alt="Sample Packs" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -138,7 +138,7 @@ const DownloadsPage: React.FC = () => {
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <BrutalistCard className="flex flex-col overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all">
-                <div className="aspect-video bg-darkGray flex items-center justify-center">
+                <div className="bg-darkGray flex items-center justify-center">
                   <img src="" className="w-full h-full object-cover" alt="Template Pack" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
