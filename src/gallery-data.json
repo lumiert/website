@@ -1,34 +1,13 @@
 [
   {
-    "id": "comics-cap-1",
-    "category": "comics",
-    "title": "Título Comic 1",
-    "description": "Descrição detalhada da primeira capa de comic.",
+    "id": "art-xerox-1",
+    "category": "art",
+    "title": "Xerox Art",
+    "description": "Usando a galeria de filtros do Photoshop, decidi experimental alguns designs com estética de impressão.",
     "images": [
-      "/galeria/comics-cap-1/1.jpg",
-      "/galeria/comics-cap-1/2.jpg"
+      "/galeria/art-xerox-1/1.jpg",
+      "/galeria/art-xerox-1/2.jpg"
     ],
-    "thumbnail": "/galeria/comics-cap-1/1.jpg"
-  },
-  {
-    "id": "fan-art-1",
-    "category": "fan",
-    "title": "Título Fan Art 1",
-    "description": "Descrição da fan art número 1.",
-    "images": [
-      "/galeria/fan-art-1/1.jpg",
-      "/galeria/fan-art-1/2.jpg"
-    ],
-    "thumbnail": "/galeria/fan-art-1/1.jpg"
-  },
-  {
-    "id": "fan-art-2",
-    "category": "fan",
-    "title": "Título Fan Art 1",
-    "description": "Descrição da fan art número 1.",
-    "images": [
-      "/galeria/fan-art-2/1.jpg"
-    ],
-    "thumbnail": "/galeria/fan-art-2/1.jpg"
+    "thumbnail": "/galeria/art-xerox-1/1.jpg"
   }
 ]
