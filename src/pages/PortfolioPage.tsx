@@ -104,20 +104,28 @@ const PortfolioPage: React.FC = () => {
             LANÇAMENTOS EM DESTAQUE
           </Heading>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
               <BrutalistCard
-                key={item}
                 className="overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all"
               >
                 <div className="aspect-square flex items-center justify-center">
-                  <span className="text-white text-xl font-bold">Release {item}</span>
+                  <img src="/images/until-the-sun.jpg" alt="Until The Sun" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Lançamento {item}</h3>
-                  <p className="mb-4">Descrição breve do lançamento musical.</p>
+                  <h3 className="text-xl font-bold mb-2">Lumiert - Until The Sun</h3>
+                  <p className="mb-4">Melodic Techno.</p>
                 </div>
               </BrutalistCard>
-            ))}
+              <BrutalistCard
+                className="overflow-hidden border-white backdrop-blur-md bg-darkGray/20 transition-all"
+              >
+                <div className="aspect-square flex items-center justify-center">
+                  <img src="/images/may.jpg" alt="Until The Sun" className="w-full h-full object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">Lumiert, Kiny - May</h3>
+                  <p className="mb-4">Melodic Techno.</p>
+                </div>
+              </BrutalistCard>
           </div>
         </Container>
       </section>
